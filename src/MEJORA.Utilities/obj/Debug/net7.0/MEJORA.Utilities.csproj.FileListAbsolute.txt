@@ -1,0 +1,11 @@
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\bin\Debug\net7.0\MEJORA.Utilities.deps.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\bin\Debug\net7.0\MEJORA.Utilities.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\bin\Debug\net7.0\MEJORA.Utilities.pdb
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\refint\MEJORA.Utilities.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.pdb
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\ref\MEJORA.Utilities.dll

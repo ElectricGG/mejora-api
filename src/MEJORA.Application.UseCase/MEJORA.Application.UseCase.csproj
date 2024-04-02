@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MEJORA.Application.Dtos\MEJORA.Application.Dtos.csproj" />
+    <ProjectReference Include="..\MEJORA.Application.Interface\MEJORA.Application.Interface.csproj" />
+    <ProjectReference Include="..\MEJORA.Infrastructure\MEJORA.Infrastructure.csproj" />
+    <ProjectReference Include="..\MEJORA.Utilities\MEJORA.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="FluentValidation" Version="11.8.1" />
+    <PackageReference Include="MailKit" Version="4.4.0" />
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+
+</Project>

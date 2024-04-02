@@ -1,0 +1,430 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Api\\MEJORA.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Api\\MEJORA.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Api\\MEJORA.Api.csproj",
+        "projectName": "MEJORA.Api",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Api\\MEJORA.Api.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\MEJORA.Application.UseCase.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\MEJORA.Application.UseCase.csproj"
+              },
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.17, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj",
+        "projectName": "MEJORA.Application.Dtos",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj",
+        "projectName": "MEJORA.Application.Interface",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\MEJORA.Application.UseCase.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\MEJORA.Application.UseCase.csproj",
+        "projectName": "MEJORA.Application.UseCase",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\MEJORA.Application.UseCase.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.UseCase\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj"
+              },
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj"
+              },
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj"
+              },
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.1, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj",
+        "projectName": "MEJORA.Infrastructure",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\MEJORA.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Interface\\MEJORA.Application.Interface.csproj"
+              },
+              "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj": {
+                "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj",
+        "projectName": "MEJORA.Utilities",
+        "projectPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\MEJORA.Utilities.csproj",
+        "packagesPath": "C:\\Users\\jesus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\jesus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.407\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

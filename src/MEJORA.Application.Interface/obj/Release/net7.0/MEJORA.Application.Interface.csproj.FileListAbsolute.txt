@@ -1,0 +1,15 @@
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\bin\Release\net7.0\MEJORA.Application.Interface.deps.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\bin\Release\net7.0\MEJORA.Application.Interface.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\bin\Release\net7.0\MEJORA.Application.Interface.pdb
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\bin\Release\net7.0\MEJORA.Application.Dtos.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\bin\Release\net7.0\MEJORA.Application.Dtos.pdb
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.csproj.AssemblyReference.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.AssemblyInfoInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.AssemblyInfo.cs
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.csproj.CopyComplete
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\refint\MEJORA.Application.Interface.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\MEJORA.Application.Interface.pdb
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Interface\obj\Release\net7.0\ref\MEJORA.Application.Interface.dll
