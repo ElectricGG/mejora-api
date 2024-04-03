@@ -40,8 +40,8 @@ namespace MEJORA.Application.UseCase.UseCases.UserPerson.CreateCommand
             EmailRequest EmailRq = new EmailRequest();
             EmailRq.Para = command.Email;
             EmailRq.Asunto = "Confirmación de correo.";
-            EmailRq.Contenido = "<p>Para confirmar el correo y acceder a su cuenta haga click <a href='#'>aqui</a></p>";
-
+            string variable = response.Guid;
+            EmailRq.Contenido = $"<p>Para confirmar el correo y acceder a su cuenta haga click <a href='http://localhost:3000/validate/{variable}'>aqui</a></p>";
             // Enviar correo electrónico de confirmación
             await _emailService.SendEmailAsync(EmailRq);
 

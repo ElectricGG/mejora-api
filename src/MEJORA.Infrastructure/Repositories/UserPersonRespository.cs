@@ -74,7 +74,7 @@ namespace MEJORA.Infrastructure.Repositories
             int newUserId = parametros.Get<int>("@NewUserId");
 
             string sql = @"
-                                SELECT id, firstname, lastname, username, email
+                                SELECT id, firstname, lastname, username, email, guid_id as Guid
                                 FROM user_person
                                 WHERE id = @NewUserId
                             ";
