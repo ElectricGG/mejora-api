@@ -13,6 +13,7 @@ namespace MEJORA.Infrastructure.Extensions
             services.AddSingleton<ApplicationDdContext>();
             services.AddScoped<IJwtGenerator, JwtGenerator>();
             services.AddSingleton<IUserPersonRespository, UserPersonRespository>();
+            services.AddSingleton<ICountryRepository, CountryRepository>();
 
             return services;
         }

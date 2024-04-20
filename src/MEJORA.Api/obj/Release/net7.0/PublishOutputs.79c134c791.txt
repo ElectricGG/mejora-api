@@ -13,10 +13,13 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\MediatR.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\MediatR.Contracts.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Logging.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\Microsoft.OpenApi.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\PubTmp\Out\MimeKit.dll

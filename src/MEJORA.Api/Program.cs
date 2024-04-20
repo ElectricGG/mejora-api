@@ -1,16 +1,22 @@
-using MEJORA.Infrastructure.Extensions;
+using MEJORA.Api.Extensions;
 using MEJORA.Application.UseCase.Extensions;
+using MEJORA.Infrastructure.Extensions;
+using POS.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var Configuration = builder.Configuration;
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInjectionPersistence();
-builder.Services.AddInjectionApplication(builder.Configuration);
+builder.Services.AddInjectionApplication(Configuration);
+builder.Services.AddAuthentication(Configuration);
+builder.Services.AddSwagger();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(opt =>
 {
@@ -34,6 +40,8 @@ var app = builder.Build();
 app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

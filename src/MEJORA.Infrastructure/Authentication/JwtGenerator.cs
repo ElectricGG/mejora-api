@@ -34,7 +34,9 @@ namespace MEJORA.Infrastructure.Authentication
             {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.Add(expirationTime),
-                SigningCredentials = credentials
+                SigningCredentials = credentials,
+                Issuer = _configuration["Jwt:Issuer"],
+                Audience = _configuration["Jwt:Issuer"]
             };
 
             var tokenHandler = new JwtSecurityTokenHandler();

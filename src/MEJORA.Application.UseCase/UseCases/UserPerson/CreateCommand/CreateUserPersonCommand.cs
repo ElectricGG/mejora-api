@@ -12,5 +12,6 @@ namespace MEJORA.Application.UseCase.UseCases.UserPerson.CreateCommand
         public string Email { get; set; }
         public string Password { get; set; }
         public int CountryId { get; set; }
+        public string Phone_number { get; set; }
     }
 }

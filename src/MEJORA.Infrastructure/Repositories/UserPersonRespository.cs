@@ -64,6 +64,7 @@ namespace MEJORA.Infrastructure.Repositories
             parametros.Add("CountryId", request.CountryId);
             parametros.Add("NewUserId", DbType.Int32, direction: ParameterDirection.Output);
             parametros.Add("GuidId", Guid.NewGuid());
+            parametros.Add("PhoneNumber", request.Phone_number);
 
             var result = await connection.ExecuteAsync(
                             procedure,

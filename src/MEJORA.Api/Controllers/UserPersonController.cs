@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MEJORA.Application.UseCase.UseCases.Auth.Commands.RecoveryPwdCommand;
 using MEJORA.Application.UseCase.UseCases.UserPerson.CreateCommand;
 using MEJORA.Application.UseCase.UseCases.UserPerson.ValidateEmailCommand;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MEJORA.Api.Controllers
 {
-    
+
     [Route("api/user/person")]
     [ApiController]
     public class UserPersonController : ControllerBase
