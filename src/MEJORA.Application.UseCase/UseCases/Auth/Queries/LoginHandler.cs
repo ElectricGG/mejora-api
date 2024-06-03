@@ -43,6 +43,7 @@ namespace MEJORA.Application.UseCase.UseCases.Auth.Queries
 
             var loginResponse = new LoginResponse
             {
+                Id= userPerson.Id,
                 FirstName = userPerson.Firstname,
                 LastName = userPerson.Lastname,
                 Username = userPerson.Username,

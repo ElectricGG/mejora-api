@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public string Name { get; set; }
         public string Code_number { get; set; }
+        public string Number_digits { get; set; }
     }
 }

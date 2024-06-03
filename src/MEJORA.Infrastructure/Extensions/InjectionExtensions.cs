@@ -14,6 +14,10 @@ namespace MEJORA.Infrastructure.Extensions
             services.AddScoped<IJwtGenerator, JwtGenerator>();
             services.AddSingleton<IUserPersonRespository, UserPersonRespository>();
             services.AddSingleton<ICountryRepository, CountryRepository>();
+            services.AddSingleton<ICourseRepository, CourseRepository>();
+            services.AddSingleton<ICourseLessonRepository, CourseLessonRepository>();
+            services.AddSingleton<ILessonRepository, LessonRepository>();
+            services.AddSingleton<ILessonVideoRepository, LessonVideoRepository>();
 
             return services;
         }

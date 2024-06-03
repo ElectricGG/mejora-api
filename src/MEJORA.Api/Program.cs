@@ -30,10 +30,18 @@ builder.Services.AddCors(opt =>
 
 var app = builder.Build();
 
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
+        Path.Combine(Directory.GetCurrentDirectory(), "Images/Lessons")
+    ),
+    RequestPath = "/images/lessons" // Esta es la ruta base para acceder a los archivos
+});
+
 // Configure the HTTP request pipeline.
 //if (app.Environment.IsDevelopment())
 //{
-    app.UseSwagger();
+app.UseSwagger();
     app.UseSwaggerUI();
 //}
 

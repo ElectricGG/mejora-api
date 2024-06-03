@@ -14,7 +14,6 @@ namespace MEJORA.Application.UseCase.Extensions
 
             services.AddTransient<IEmailService, EmailService>();
 
-
             return services;
         }
     }
