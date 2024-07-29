@@ -1,18 +1,17 @@
 using MEJORA.Api.Extensions;
 using MEJORA.Application.UseCase.Extensions;
 using MEJORA.Infrastructure.Extensions;
+using Microsoft.AspNetCore.Http.Features;
 using POS.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 var Configuration = builder.Configuration;
-// Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddInjectionPersistence();
+builder.Services.AddInjectionPersistence(Configuration);
 builder.Services.AddInjectionApplication(Configuration);
 builder.Services.AddAuthentication(Configuration);
 builder.Services.AddSwagger();
@@ -28,6 +27,16 @@ builder.Services.AddCors(opt =>
     });
 });
 
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = long.MaxValue; // Sin límite
+});
+
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.Limits.MaxRequestBodySize = null; // Sin límite
+});
+
 var app = builder.Build();
 
 app.UseStaticFiles(new StaticFileOptions
@@ -35,15 +44,11 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
         Path.Combine(Directory.GetCurrentDirectory(), "Images/Lessons")
     ),
-    RequestPath = "/images/lessons" // Esta es la ruta base para acceder a los archivos
+    RequestPath = "/images/lessons" 
 });
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
 app.UseSwagger();
     app.UseSwaggerUI();
-//}
 
 app.UseCors("AllowAll");
 
@@ -52,6 +57,16 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.Use(async (context, next) =>
+{
+    var maxRequestBodySizeFeature = context.Features.Get<IHttpMaxRequestBodySizeFeature>();
+    if (maxRequestBodySizeFeature != null)
+    {
+        maxRequestBodySizeFeature.MaxRequestBodySize = null; // Sin límite
+    }
+    await next();
+});
 
 app.MapControllers();
 

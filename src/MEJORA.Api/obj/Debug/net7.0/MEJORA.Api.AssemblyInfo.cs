@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MEJORA.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19a74ae87cc9249134dd9d38d0ac03dc2f18c019")]
 [assembly: System.Reflection.AssemblyProductAttribute("MEJORA.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MEJORA.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

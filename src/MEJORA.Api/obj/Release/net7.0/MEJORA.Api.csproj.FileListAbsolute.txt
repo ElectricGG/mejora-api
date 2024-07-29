@@ -52,7 +52,6 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\staticwebassets.build.json
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\staticwebassets.development.json
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\scopedcss\bundle\MEJORA.Api.styles.css
-C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\MEJORA.Api.csproj.CopyComplete
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\MEJORA.Api.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\refint\MEJORA.Api.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\MEJORA.Api.pdb
@@ -69,3 +68,9 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\MEJORA.Api.sourcelink.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Release\net7.0\MEJORA.Api.csproj.Up2Date
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\RestSharp.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\FFMpegCore.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Instances.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Newtonsoft.Json.dll

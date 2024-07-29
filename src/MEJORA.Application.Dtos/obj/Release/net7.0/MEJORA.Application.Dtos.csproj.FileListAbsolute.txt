@@ -9,3 +9,5 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Applicat
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Dtos\obj\Release\net7.0\refint\MEJORA.Application.Dtos.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Dtos\obj\Release\net7.0\MEJORA.Application.Dtos.pdb
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Dtos\obj\Release\net7.0\ref\MEJORA.Application.Dtos.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Dtos\obj\Release\net7.0\MEJORA.Application.Dtos.sourcelink.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.Dtos\obj\Release\net7.0\MEJORA.Application.Dtos.csproj.AssemblyReference.cache

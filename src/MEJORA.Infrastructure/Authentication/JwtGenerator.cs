@@ -10,6 +10,7 @@ namespace MEJORA.Infrastructure.Authentication
     public class JwtGenerator : IJwtGenerator
     {
         private readonly IConfiguration _configuration;
+
         public JwtGenerator(IConfiguration configuration)
         {
             _configuration = configuration;
@@ -17,7 +18,8 @@ namespace MEJORA.Infrastructure.Authentication
 
         public string GenerateToken(ClaimnsRequest request)
         {
-            return GenerateTokenInternal(request, TimeSpan.FromHours(2));
+            // Cambiar el tiempo de expiración a 1 minuto
+            return GenerateTokenInternal(request, TimeSpan.FromDays(5));
         }
 
         private string GenerateTokenInternal(ClaimnsRequest request, TimeSpan expirationTime)

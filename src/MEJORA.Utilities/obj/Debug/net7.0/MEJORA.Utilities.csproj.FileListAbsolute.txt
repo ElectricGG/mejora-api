@@ -5,6 +5,7 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilitie
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.AssemblyInfoInputs.cache
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.AssemblyInfo.cs
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.sourcelink.json
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\refint\MEJORA.Utilities.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Debug\net7.0\MEJORA.Utilities.pdb

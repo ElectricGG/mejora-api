@@ -1,11 +1,12 @@
 ﻿using MediatR;
+using MEJORA.Application.Dtos.Lesson.Request;
 using MEJORA.Application.UseCase.UseCases.Lesson.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MEJORA.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/lesson")]
     [ApiController]
     public class LessonController : ControllerBase
@@ -16,6 +17,10 @@ namespace MEJORA.Api.Controllers
 
         [HttpGet("get")]
         public async Task<IActionResult> GetLessonDetail([FromQuery] GetLessonDetailQuery query)
+            => Ok(await _mediator.Send(query));
+
+        [HttpGet("list-details")]
+        public async Task<IActionResult> ListLessonsDetails([FromQuery] ListLessonDetailsQuery query)
             => Ok(await _mediator.Send(query));
     }
 }

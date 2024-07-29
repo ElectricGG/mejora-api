@@ -9,3 +9,4 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilitie
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Release\net7.0\refint\MEJORA.Utilities.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Release\net7.0\MEJORA.Utilities.pdb
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Release\net7.0\ref\MEJORA.Utilities.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Utilities\obj\Release\net7.0\MEJORA.Utilities.sourcelink.json

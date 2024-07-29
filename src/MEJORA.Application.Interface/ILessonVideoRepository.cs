@@ -6,5 +6,6 @@ namespace MEJORA.Application.Interface
     public interface ILessonVideoRepository
     {
         Task<List<ListLessonsVideoResponse>> ListLessonByCourseId(ListLessonsVideoRequest request);
+        Task<CreateLessonVideoResponse> CreateLessonVideo(CreateLessonVideoRequest request);
     }
 }

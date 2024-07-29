@@ -7,5 +7,6 @@ namespace MEJORA.Application.UseCase.UseCases.LessonVideo.Queries
     public class ListLessonsVideoQuery : IRequest<Response<ListLessonsVideoResponse>>
     {
         public int LessonId { get; set; }
+        public int UserPersonId { get; set; }
     }
 }

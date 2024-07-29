@@ -18,5 +18,6 @@
         public bool? State_Validation_Email { get; set; }
         public string? Guid_id { get; set; }
         public string? Phone_number { get; set; }
+        public bool? Is_Admin { get; set; }
     }
 }

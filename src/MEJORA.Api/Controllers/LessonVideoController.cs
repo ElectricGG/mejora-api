@@ -1,11 +1,12 @@
 ﻿using MediatR;
+using MEJORA.Application.UseCase.UseCases.LessonVideo.Commands;
 using MEJORA.Application.UseCase.UseCases.LessonVideo.Queries;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MEJORA.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/lesson/video")]
     [ApiController]
     public class LessonVideoController : ControllerBase
@@ -17,5 +18,11 @@ namespace MEJORA.Api.Controllers
         [HttpGet("list")]
         public async Task<IActionResult> ListLessonVideo([FromQuery] ListLessonsVideoQuery query)
             => Ok(await _mediator.Send(query));
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] CreateLessonVideoCommand command)
+        {
+            return Ok(await _mediator.Send(command));
+        }
     }
 }

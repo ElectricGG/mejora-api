@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5uy9G/QzUVHzznOORcU1UfWTUKl8YFPoNcSsiVsCgdHu7Tuo1Cl4kfQO1SYPL0AFQdgaB2z0OKmlzgSAUcjoNw==",
+  "dgSpecHash": "lofxh6Y7bRY=",
   "success": true,
   "projectFilePath": "C:\\Users\\jesus\\OneDrive\\Escritorio\\AcademyWeb\\Backend\\MEJORA\\src\\MEJORA.Application.Dtos\\MEJORA.Application.Dtos.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jesus\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\jesus\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

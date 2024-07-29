@@ -7,5 +7,6 @@
         public string Description { get; set; }
         public int DurationHours { get; set; }
         public string NameLevel { get; set; }
+        public string CourseProjectId { get; set; }
     }
 }

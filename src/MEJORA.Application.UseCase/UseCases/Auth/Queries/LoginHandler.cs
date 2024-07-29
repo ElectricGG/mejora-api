@@ -48,7 +48,8 @@ namespace MEJORA.Application.UseCase.UseCases.Auth.Queries
                 LastName = userPerson.Lastname,
                 Username = userPerson.Username,
                 Email = userPerson.Email,
-                Token = _jwtGenerator.GenerateToken(claims)
+                Token = _jwtGenerator.GenerateToken(claims),
+                Is_Admin = userPerson.Is_Admin,
             };
 
             return new Response<LoginResponse>(loginResponse);

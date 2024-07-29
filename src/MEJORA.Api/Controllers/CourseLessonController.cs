@@ -1,11 +1,13 @@
 ﻿using MediatR;
+using MEJORA.Application.UseCase.UseCases.Course.Commands;
 using MEJORA.Application.UseCase.UseCases.CourseLesson.Queries;
+using MEJORA.Application.UseCase.UseCases.Lesson.Commands;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MEJORA.Api.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [Route("api/course/lesson")]
     [ApiController]
     public class CourseLessonController : ControllerBase
@@ -33,5 +35,9 @@ namespace MEJORA.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> ListLessonByCourseId([FromQuery] ListLessonByCourseIdQuery query)
             => Ok(await _mediator.Send(query));
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromForm] CreateLessonCommand command)
+            => Ok(await _mediator.Send(command));
     }
 }

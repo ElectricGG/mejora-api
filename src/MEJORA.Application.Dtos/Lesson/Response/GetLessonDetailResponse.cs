@@ -12,5 +12,6 @@
         public string? CvInstructor { get; set; }
         public string? InstructorName { get; set; }
         public string? InstructorProfession { get; set; }
+        public string? Duration { get; set; }
     }
 }

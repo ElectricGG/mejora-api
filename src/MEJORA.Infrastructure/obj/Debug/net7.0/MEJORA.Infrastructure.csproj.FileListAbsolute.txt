@@ -12,8 +12,9 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastr
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.AssemblyInfo.cs
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.sourcelink.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.I.80D77ABC.Up2Date
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\refint\MEJORA.Infrastructure.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.pdb
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\ref\MEJORA.Infrastructure.dll
-C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Infrastructure\obj\Debug\net7.0\MEJORA.Infrastructure.csproj.CopyComplete

@@ -14,8 +14,9 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Applicat
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.AssemblyInfoInputs.cache
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.AssemblyInfo.cs
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.csproj.CoreCompileInputs.cache
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.sourcelink.json
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.A.2FC169C7.Up2Date
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\refint\MEJORA.Application.UseCase.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.pdb
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\ref\MEJORA.Application.UseCase.dll
-C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Application.UseCase\obj\Debug\net7.0\MEJORA.Application.UseCase.csproj.CopyComplete

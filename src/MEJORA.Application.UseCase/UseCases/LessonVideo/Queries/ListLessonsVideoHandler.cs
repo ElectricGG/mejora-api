@@ -14,7 +14,8 @@ namespace MEJORA.Application.UseCase.UseCases.LessonVideo.Queries
 
         public async Task<Response<ListLessonsVideoResponse>> Handle(ListLessonsVideoQuery request, CancellationToken cancellationToken)
         {
-            var response = await _repository.ListLessonByCourseId(new ListLessonsVideoRequest { LessonId = request.LessonId });
+            var requestMap = new ListLessonsVideoRequest { LessonId = request.LessonId, UserPersonId = request.UserPersonId };
+            var response = await _repository.ListLessonByCourseId(requestMap);
             return new Response<ListLessonsVideoResponse>(response);
         }
     }
