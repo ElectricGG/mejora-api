@@ -1,14 +1,11 @@
 ﻿using Dapper;
+using FFMpegCore;
 using MEJORA.Application.Dtos.LessonVideo.Request;
 using MEJORA.Application.Dtos.LessonVideo.Response;
 using MEJORA.Application.Dtos.Wistia.Request;
 using MEJORA.Application.Interface;
 using MEJORA.Infrastructure.Context;
 using System.Data;
-using FFMpegCore;
-using FFMpegCore.Pipes;
-using Microsoft.AspNetCore.Http;
-using System.Net.Http;
 
 namespace MEJORA.Infrastructure.Repositories
 {
@@ -141,6 +138,64 @@ namespace MEJORA.Infrastructure.Repositories
             parametros.Add("@UserPersonId", request.UserPersonId);
 
             var response = await connection.QueryAsync<ListLessonsVideoResponse>(
+                procedure,
+                param: parametros,
+                commandType: CommandType.StoredProcedure
+            );
+
+            return response.ToList();
+        }
+
+
+        public async Task<bool> DeleteLessonVideo(DeleteLessonVideoRequest request)
+        {
+            try
+            {
+                using var connection = _context.CreateConnection;
+
+                string spDeleteLessonVideo = "spDeleteLessonVideo";
+
+                var param = new DynamicParameters();
+                param.Add("@LessonVideoId", request.Id);
+
+                // Ejecutar el procedimiento y capturar el número de filas afectadas
+                var affectedRows = await connection.ExecuteScalarAsync<int>(
+                    spDeleteLessonVideo,
+                    param,
+                    commandType: CommandType.StoredProcedure
+                );
+
+                string spGetLessonVideoHashedById = "spGetLessonVideoHashedById";
+
+                var paramHashed = new DynamicParameters();
+                paramHashed.Add("@LessonVideoId", request.Id);
+
+                // Ejecutar el procedimiento y capturar el valor devuelto como string
+                string hashedId = await connection.QuerySingleAsync<string>(
+                    spGetLessonVideoHashedById,
+                    paramHashed,
+                    commandType: CommandType.StoredProcedure
+                );
+
+                await _wistiaRepository.DeleteMedia(hashedId);
+
+                return affectedRows > 0;
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<List<ListLessonVideoByLessonIdResponse>> ListLessonVideoByLessonId(ListLessonVideoByLessonIdRequest request)
+        {
+            using var connection = _context.CreateConnection;
+            string procedure = "spListLessonVideoByLessonId";
+
+            var parametros = new DynamicParameters();
+            parametros.Add("@LessonId", request.LessonId);
+
+            var response = await connection.QueryAsync<ListLessonVideoByLessonIdResponse>(
                 procedure,
                 param: parametros,
                 commandType: CommandType.StoredProcedure

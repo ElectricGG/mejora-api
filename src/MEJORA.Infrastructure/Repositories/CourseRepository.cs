@@ -1,17 +1,20 @@
 ﻿using Dapper;
 using MEJORA.Application.Dtos.Course.Request;
 using MEJORA.Application.Dtos.Course.Response;
+using MEJORA.Application.Dtos.LessonVideo.Request;
 using MEJORA.Application.Interface;
 using MEJORA.Infrastructure.Context;
 using System.Data;
+using System.Transactions;
 
 namespace MEJORA.Infrastructure.Repositories
 {
     public class CourseRepository : ICourseRepository
     {
         private readonly ApplicationDdContext _context;
-        public CourseRepository(ApplicationDdContext context)
-            => _context = context;
+        private readonly IWistiaRepository _wistiaRepository;
+        public CourseRepository(ApplicationDdContext context, IWistiaRepository wistiaRepository)
+            => (_context, _wistiaRepository) = (context, wistiaRepository);
 
         public async Task<CreateCourseResponse> CreateCourses(CreateCourseRequest request)
         {
@@ -26,17 +29,12 @@ namespace MEJORA.Infrastructure.Repositories
                 try
                 {
                     string spCreateCourse = "spCreateCourse";
-                    string spCreateLesson = "spCreateLesson";
-                    string spCreateCourseLesson = "spCreateCourseLesson";
-                    string spCreateLessonVideo = "spCreateLessonVideo";
-                    string spCreateVideoUserCheck = "spCreateVideoUserCheck";
+                    string spUpdateCourseProjectId = "spUpdateCourseProjectId";
 
                     var paramCreateCourse = new DynamicParameters();
                     paramCreateCourse.Add("@Name", request.Name);
                     paramCreateCourse.Add("@Description", request.Description);
-                    paramCreateCourse.Add("@CourseLevelId", request.CourseLevelId);
                     paramCreateCourse.Add("@UserCreatorId", request.UserCreatorId);
-                    paramCreateCourse.Add("@PreviousImage", request.PreviousImage);
 
                     var courseIdResult = await connection.QuerySingleAsync<int>(
                             spCreateCourse,
@@ -45,91 +43,37 @@ namespace MEJORA.Infrastructure.Repositories
                             commandType: CommandType.StoredProcedure
                         );
 
-                    foreach (var courseLessonDto in request.createLessonRequest)
+                    var createProject = await _wistiaRepository.CreateProject(new CreateProjectRequest { Name = request.Name });
+
+                    if(createProject == null || createProject.Id == 0)
                     {
-                        var paramCreateLesson = new DynamicParameters();
-                        paramCreateLesson.Add("@Name", courseLessonDto.Name);
-                        paramCreateLesson.Add("@Description", courseLessonDto.Description);
-                        paramCreateLesson.Add("@DurationMinutes", 0);
-                        paramCreateLesson.Add("@Url", "");
-                        paramCreateLesson.Add("@UserCreatorId", courseLessonDto.UserCreatorId);
-                        paramCreateLesson.Add("@PreviousImage", courseLessonDto.PreviousImage);
-                        paramCreateLesson.Add("@LessonOrder", courseLessonDto.LessonOrder);
-                        paramCreateLesson.Add("@Objectives", courseLessonDto.Objectives);
-                        paramCreateLesson.Add("@Bibliography", courseLessonDto.Bibliography);
-                        paramCreateLesson.Add("@CvInstructor", courseLessonDto.CvInstructor);
-                        paramCreateLesson.Add("@IndexLesson", courseLessonDto.IndexLesson);
-                        paramCreateLesson.Add("@InstructorName", courseLessonDto.InstructorName);
-                        paramCreateLesson.Add("@InstructorProfession", courseLessonDto.InstructorProfession);
-                        paramCreateLesson.Add("@DurationSeconds", "");
-
-                        var lessonIdResult = await connection.QuerySingleAsync<int>(
-                            spCreateLesson,
-                            paramCreateLesson,
-                            transaction: transaction,
-                            commandType: CommandType.StoredProcedure
-                        );
-
-                        #region RELACION COURSE LESSON
-                        var paramCreateCourseLesson = new DynamicParameters();
-                        paramCreateCourseLesson.Add("@CourseId", courseIdResult);
-                        paramCreateCourseLesson.Add("@LessonId", lessonIdResult);
-                        paramCreateCourseLesson.Add("@UserCreatorId", courseLessonDto.UserCreatorId);
-
-                        var courseLessonIdResult = await connection.QuerySingleAsync<int>(
-                            spCreateCourseLesson,
-                            paramCreateCourseLesson,
-                            transaction: transaction,
-                            commandType: CommandType.StoredProcedure
-                        );
-                        #endregion
-
-                        //foreach (var lessonVideoDto in courseLessonDto.createLessonVideoRequests)
-                        //{
-                        //    var paramLessonVideo = new DynamicParameters();
-                        //    paramLessonVideo.Add("@LessonId", lessonIdResult);
-                        //    paramLessonVideo.Add("@Name", lessonVideoDto.Name);
-                        //    paramLessonVideo.Add("@Description", lessonVideoDto.Description);
-                        //    paramLessonVideo.Add("@HtmlContent", "");
-                        //    paramLessonVideo.Add("@UserCreatorId", lessonVideoDto.UserCreatorId);
-                        //    paramLessonVideo.Add("@Hours", lessonVideoDto.Hours);
-                        //    paramLessonVideo.Add("@Mins", lessonVideoDto.Mins);
-                        //    paramLessonVideo.Add("@Sec", lessonVideoDto.Sec);
-                        //    paramLessonVideo.Add("@PlayOrder", lessonVideoDto.PlayOrder);
-
-                        //    var lessonVideoIdResult = await connection.QuerySingleAsync<int>(
-                        //        spCreateLessonVideo,
-                        //        paramLessonVideo,
-                        //        transaction: transaction,
-                        //        commandType: CommandType.StoredProcedure
-                        //    );
-
-                        //    #region INSERCION PARA PODER GUARDAR EL CHECK POR CADA VIDEO
-                            
-                        //    var paramVideoUserCheck = new DynamicParameters();
-                        //    paramLessonVideo.Add("@UserPersonId", lessonVideoDto.UserCreatorId);
-                        //    paramLessonVideo.Add("@LessonVideoId", lessonVideoIdResult);
-                        //    paramLessonVideo.Add("@CheckState", 0);
-
-                        //    var videoUserCheckIdResult = await connection.QuerySingleAsync<int>(
-                        //        spCreateVideoUserCheck,
-                        //        paramVideoUserCheck,
-                        //        transaction: transaction,
-                        //        commandType: CommandType.StoredProcedure
-                        //    );
-
-                        //    #endregion
-                        //}
+                        transaction.Rollback();
+                        throw new Exception("Error creating courses");
                     }
+
+                    
+
+                    var paramUpdateCourseProjectId = new DynamicParameters();
+                    paramUpdateCourseProjectId.Add("@CourseId", courseIdResult);
+                    paramUpdateCourseProjectId.Add("@CourseProjectId", createProject.Id);
+
+                    var updateCourseProjectIdResult = await connection.QuerySingleAsync<int>(
+                            spUpdateCourseProjectId,
+                            paramUpdateCourseProjectId,
+                            transaction: transaction,
+                            commandType: CommandType.StoredProcedure
+                        );
 
                     // Crear la respuesta con el ID devuelto
                     response = new CreateCourseResponse
                     {
                         Id = courseIdResult,
                         Name = request.Name,
+                        CourseProjectId = createProject.Id
                     };
 
                     transaction.Commit();
+
                 }
                 catch (Exception ex)
                 {
@@ -153,5 +97,115 @@ namespace MEJORA.Infrastructure.Repositories
 
             return response.ToList();
         }
+
+        public async Task<List<ListCoursesAdminResponse>> ListCoursesAdmin()
+        {
+            using var connection = _context.CreateConnection;
+            string procedure = "spListCoursesAdmin";
+
+            var response = await connection.QueryAsync<ListCoursesAdminResponse>(
+                procedure,
+                commandType: CommandType.StoredProcedure
+            );
+
+            return response.ToList();
+        }
+
+        public async Task<bool> UpdateCourse(UpdateCourseRequest request)
+        {
+            try
+            {
+                using var connection = _context.CreateConnection;
+
+                string spUpdateCourse = "spUpdateCourse";
+
+                var param = new DynamicParameters();
+                param.Add("@CourseId", request.Id);
+                param.Add("@Name", request.Name);
+                param.Add("@Descripcion", request.Description);
+
+                // Ejecutar el procedimiento y capturar el número de filas afectadas
+                var affectedRows = await connection.ExecuteScalarAsync<int>(
+                    spUpdateCourse,
+                    param,
+                    commandType: CommandType.StoredProcedure
+                );
+
+                var requestUpdate = new UpdateProjectRequest
+                {
+                    Id = request.CourseProjectId.ToString(),
+                    Name = request.Name,
+                    Description = request.Description
+                };
+
+                if (affectedRows > 0)
+                {
+                    var createProject = await _wistiaRepository.UpdateProject(requestUpdate);
+                }
+
+                // Retornar true si se afectó al menos una fila, false en caso contrario
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<bool> DeleteCourse(DeleteCrouseRequest request)
+        {
+            try
+            {
+                using var connection = _context.CreateConnection;
+
+                string spDeleteCourse = "spDeleteCourse";
+
+                var param = new DynamicParameters();
+                param.Add("@CourseId", request.Id);
+
+                // Ejecutar el procedimiento y capturar el número de filas afectadas
+                var affectedRows = await connection.ExecuteScalarAsync<int>(
+                    spDeleteCourse,
+                    param,
+                    commandType: CommandType.StoredProcedure
+                );
+
+                var requestDelete = new DeleteProjectRequest
+                {
+                    Id = request.CourseProjectId.ToString()
+                };
+
+                if (affectedRows > 0)
+                {
+                    var deleteProject = await _wistiaRepository.DeleteProject(requestDelete);
+
+                    if(deleteProject is not null)
+                    {
+                        string spListLessonsToDelete = "spListLessonsToDelete";
+                        // Obtener la lista de lecciones que se deben eliminar
+                        var lessonsToDelete = await connection.QueryAsync<string>(
+                            spListLessonsToDelete,
+                            new { CourseId = request.Id },
+                            commandType: CommandType.StoredProcedure
+                        );
+
+                        // Recorre el listado de lecciones y eliminar cada una
+                        foreach (var hashed_id in lessonsToDelete)
+                        {
+                            await _wistiaRepository.DeleteMedia(hashed_id);
+                        }
+                    }
+                }
+
+                // Retornar true si se afectó al menos una fila, false en caso contrario
+                return affectedRows > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
 }

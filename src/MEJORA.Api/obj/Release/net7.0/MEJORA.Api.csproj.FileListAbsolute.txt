@@ -74,3 +74,10 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\FFMpegCore.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Instances.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Newtonsoft.Json.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Azure.Core.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Azure.Storage.Blobs.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Azure.Storage.Common.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\System.ClientModel.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\System.IO.Hashing.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Release\net7.0\System.Memory.Data.dll

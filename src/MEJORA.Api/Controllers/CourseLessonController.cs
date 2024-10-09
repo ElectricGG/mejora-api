@@ -39,5 +39,13 @@ namespace MEJORA.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromForm] CreateLessonCommand command)
             => Ok(await _mediator.Send(command));
+
+        [HttpPut]
+        public async Task<IActionResult> Update([FromForm] UpdateLessonCommand command)
+            => Ok(await _mediator.Send(command));
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+            => Ok(await _mediator.Send(new DeleteLessonCommand { Id = id }));
     }
 }

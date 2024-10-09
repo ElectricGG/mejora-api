@@ -22,11 +22,7 @@ namespace MEJORA.Application.UseCase.UseCases.Course.Commands
             {
                 Name = request.Name,
                 Description = request.Description,
-                DurationMinutes = request.DurationMinutes,
-                CourseLevelId = request.CourseLevelId,
                 UserCreatorId = request.UserCreatorId,
-                PreviousImage = request.PreviousImage,
-                createLessonRequest = request.createLessonRequest,
             };
 
             createResponse = await _courseRepository.CreateCourses(mapDto);
@@ -38,6 +34,8 @@ namespace MEJORA.Application.UseCase.UseCases.Course.Commands
 
                 return response;
             }
+
+            response.Data = createResponse;
 
             return response;
         }

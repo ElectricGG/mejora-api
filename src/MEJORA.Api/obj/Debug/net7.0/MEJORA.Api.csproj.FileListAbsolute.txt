@@ -25,6 +25,7 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Microsoft.OpenApi.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\MimeKit.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\RestSharp.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -73,4 +74,10 @@ C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Debug\net7.0\MEJORA.Api.pdb
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Debug\net7.0\MEJORA.Api.genruntimeconfig.cache
 C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\obj\Debug\net7.0\ref\MEJORA.Api.dll
-C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Azure.Storage.Blobs.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Azure.Storage.Common.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\System.ClientModel.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\System.IO.Hashing.dll
+C:\Users\jesus\OneDrive\Escritorio\AcademyWeb\Backend\MEJORA\src\MEJORA.Api\bin\Debug\net7.0\System.Memory.Data.dll

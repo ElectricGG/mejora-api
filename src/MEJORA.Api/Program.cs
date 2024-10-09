@@ -42,10 +42,12 @@ var app = builder.Build();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(
-        Path.Combine(Directory.GetCurrentDirectory(), "Images/Lessons")
+        "/app/Images/Lessons" //container
+        //Path.Combine(Directory.GetCurrentDirectory(), "Images/Lessons") //local
     ),
-    RequestPath = "/images/lessons" 
+    RequestPath = "/images/lessons"
 });
+
 
 app.UseSwagger();
     app.UseSwaggerUI();

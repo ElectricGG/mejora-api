@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MEJORA.Application.Dtos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+19a74ae87cc9249134dd9d38d0ac03dc2f18c019")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b67ad4fc0ab41c482e0ce02dab27a5a907b9a5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("MEJORA.Application.Dtos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MEJORA.Application.Dtos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -7,6 +7,8 @@ namespace MEJORA.Application.Interface
     {
         Task<List<ListCoursesResponse>> ListCourses();
         Task<CreateCourseResponse> CreateCourses(CreateCourseRequest request);
-
+        Task<List<ListCoursesAdminResponse>> ListCoursesAdmin();
+        Task<bool> UpdateCourse(UpdateCourseRequest request);
+        Task<bool> DeleteCourse(DeleteCrouseRequest request);
     }
 }

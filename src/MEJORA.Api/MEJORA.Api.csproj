@@ -21,4 +21,8 @@
     <ProjectReference Include="..\MEJORA.Infrastructure\MEJORA.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\Lessons\" />
+  </ItemGroup>
+
 </Project>
