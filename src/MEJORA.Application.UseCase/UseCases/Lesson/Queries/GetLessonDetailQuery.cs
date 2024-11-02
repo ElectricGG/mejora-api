@@ -8,4 +8,5 @@ namespace MEJORA.Application.UseCase.UseCases.Lesson.Queries
     {
         public int LessonId { get; set; }
     }
+
 }

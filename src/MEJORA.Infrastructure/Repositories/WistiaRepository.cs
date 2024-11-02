@@ -1,13 +1,15 @@
-﻿using MEJORA.Application.Dtos.Wistia.Request;
+﻿using Dapper;
+using MEJORA.Application.Dtos.Course.Request;
+using MEJORA.Application.Dtos.Course.Response;
+using MEJORA.Application.Dtos.Wistia.Request;
 using MEJORA.Application.Dtos.Wistia.Response;
 using MEJORA.Application.Interface;
+using MEJORA.Infrastructure.Context;
 using Microsoft.Extensions.Configuration;
-using RestSharp;
-using System.Net.Http.Headers;
 using Newtonsoft.Json;
-using MEJORA.Application.Dtos.Course.Response;
-using MEJORA.Application.Dtos.Course.Request;
-using System.Text; // Asegúrate de tener esta referencia instalada en tu proyecto
+using System.Data; // Asegúrate de tener esta referencia instalada en tu proyecto
+using System.Net.Http.Headers;
+using System.Text;
 
 
 namespace MEJORA.Infrastructure.Repositories
@@ -16,11 +18,13 @@ namespace MEJORA.Infrastructure.Repositories
     {
         private readonly IConfiguration _configuration;
         private readonly HttpClient _httpClient;
+        private readonly ApplicationDdContext _context;
 
-        public WistiaRepository(IConfiguration configuration, HttpClient httpClient) 
+        public WistiaRepository(IConfiguration configuration, HttpClient httpClient, ApplicationDdContext context) 
         { 
             _configuration = configuration;
             _httpClient = httpClient;
+            _context = context;
         }
 
         public async Task<CreateProjectResponse> CreateProject(CreateProjectRequest request)
@@ -53,6 +57,18 @@ namespace MEJORA.Infrastructure.Repositories
             }
             catch (Exception ex)
             {
+                using var connection = _context.CreateConnection;
+                string procedure = "spCreateLogExceptions";
+
+                var parametros = new DynamicParameters();
+                parametros.Add("@result", ex.Message + " ___ " + ex.InnerException + " ___ " + ex.StackTrace);
+
+                var affectedRows = await connection.ExecuteAsync(
+                    procedure,
+                    param: parametros,
+                    commandType: CommandType.StoredProcedure
+                );
+
                 throw ex;
             }
         }

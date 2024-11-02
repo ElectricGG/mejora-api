@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MEJORA.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1b67ad4fc0ab41c482e0ce02dab27a5a907b9a5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2eaac489cb7109ad8e2625b33a9ce9429cf92c23")]
 [assembly: System.Reflection.AssemblyProductAttribute("MEJORA.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MEJORA.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

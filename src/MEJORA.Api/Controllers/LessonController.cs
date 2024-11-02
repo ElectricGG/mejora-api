@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using MEJORA.Application.Dtos.Lesson.Request;
 using MEJORA.Application.UseCase.UseCases.Lesson.Commands;
 using MEJORA.Application.UseCase.UseCases.Lesson.Queries;
 using Microsoft.AspNetCore.Authorization;
@@ -19,6 +18,10 @@ namespace MEJORA.Api.Controllers
         [HttpGet("get")]
         public async Task<IActionResult> GetLessonDetail([FromQuery] GetLessonDetailQuery query)
             => Ok(await _mediator.Send(query));
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetLessonById([FromRoute] int id)
+            => Ok(await _mediator.Send(new GetLessonByIdQuery { Id = id }));
 
         [HttpGet("list-details")]
         public async Task<IActionResult> ListLessonsDetails([FromQuery] ListLessonDetailsQuery query)

@@ -44,10 +44,25 @@ namespace MEJORA.Application.UseCase.UseCases.UserPerson.CreateCommand
 
             EmailRequest EmailRq = new EmailRequest();
             EmailRq.Para = command.Email;
-            EmailRq.Asunto = "Confirmación de correo.";
+            EmailRq.Asunto = "MEJORA - Confirmación de correo.";
             string variable = response.Guid;
-            EmailRq.Contenido = $"<p>Para confirmar el correo y acceder a su cuenta haga click <a href='{baseUrl}{variable}'>aqui</a></p>";
-            // Enviar correo electrónico de confirmación
+            // Contenido HTML con estilos inline para personalizar el color del h1 y la alineación
+            EmailRq.Contenido = $@"
+                                    <div style='width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;'>
+                                        <!-- Caja del título -->
+                                        <div style='width: 100%; background-color: black; padding: 20px;'>
+                                            <h1 style='color: white; text-align: left; margin: 0; margin-left: 20px;'>MEJORA</h1>
+                                        </div>
+                                        <!-- Caja del contenido -->
+                                        <div style='width: 100%; background-color: white; color: black; border: 1px solid black; padding: 20px; box-sizing: border-box;'>
+                                            <h2>Bienvenid@,</h2>
+                                            <p>Para confirmar el correo y acceder a su cuenta haga click 
+                                               <a href='{baseUrl}{variable}' style='color: #2196F3;'>aquí</a>.
+                                            </p>
+                                        </div>
+                                    </div>";
+
+
             await _emailService.SendEmailAsync(EmailRq);
 
             return new Response<CreateUserPersonResponse>(response);

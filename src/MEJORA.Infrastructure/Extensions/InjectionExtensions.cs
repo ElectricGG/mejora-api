@@ -4,7 +4,6 @@ using MEJORA.Infrastructure.Context;
 using MEJORA.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.Net.Http; // Asegúrate de tener esto
 
 namespace MEJORA.Infrastructure.Extensions
 {
@@ -14,6 +13,7 @@ namespace MEJORA.Infrastructure.Extensions
         {
             services.AddSingleton<ApplicationDdContext>();
             services.AddScoped<IJwtGenerator, JwtGenerator>();
+
             services.AddSingleton<IConfiguration>(configuration);
 
             services.AddSingleton<IUserPersonRespository, UserPersonRespository>();
@@ -25,7 +25,7 @@ namespace MEJORA.Infrastructure.Extensions
             services.AddSingleton<IVideoUserCheckRepository, VideoUserCheckRepository>();
             services.AddSingleton<IUserProgressRepository, UserProgressRepository>();
             services.AddSingleton<IVideoQuestionRepository, VideoQuestionRepository>();
-            services.AddSingleton<IWistiaRepository, WistiaRepository>();
+            services.AddTransient<IAzureStorage, AzureStorage>();
 
             // Configurar HttpClient para WistiaService
             services.AddHttpClient<IWistiaRepository, WistiaRepository>();

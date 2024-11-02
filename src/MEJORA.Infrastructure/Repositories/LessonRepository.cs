@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using Azure.Core;
+using Dapper;
 using MEJORA.Application.Dtos.Course.Request;
 using MEJORA.Application.Dtos.Lesson.Request;
 using MEJORA.Application.Dtos.Lesson.Response;
@@ -16,8 +17,10 @@ namespace MEJORA.Infrastructure.Repositories
         private readonly ApplicationDdContext _context;
         private readonly IWistiaRepository _wistiaRepository;
         private readonly IConfiguration _configuration;
-        public LessonRepository(ApplicationDdContext context, IWistiaRepository wistiaRepository, IConfiguration configuration)
-            => (_context, _wistiaRepository, _configuration) = (context, wistiaRepository,configuration);
+        private readonly IAzureStorage _azureStorage;
+
+        public LessonRepository(ApplicationDdContext context, IWistiaRepository wistiaRepository, IConfiguration configuration, IAzureStorage azureStorage)
+            => (_context, _wistiaRepository, _configuration, _azureStorage) = (context, wistiaRepository, configuration, azureStorage);
 
         public async Task<GetLessonDetailResponse> GetLessonDetail(GetLessonDetailRequest request)
         {
@@ -39,7 +42,7 @@ namespace MEJORA.Infrastructure.Repositories
         public async Task<CreateLessonResponse> CreateLesson(CreateLessonRequest request)
         {
             var responseDto = new CreateLessonResponse();
-            var baseUrl = _configuration["UrlBase:urlMejora"]!;
+            var baseUrl = _configuration["UrlBase:urlMejoraApi"]!;
             var urlLessonsImg = _configuration["UrlBase:urlLessonsImg"]!;
             
             using (var connection = _context.CreateConnection)
@@ -82,24 +85,11 @@ namespace MEJORA.Infrastructure.Repositories
                         return responseDto;
                     }
 
-                    var path = Path.Combine(Directory.GetCurrentDirectory(), "Images\\Lessons");
-                    if (!Directory.Exists(path))
-                    {
-                        Directory.CreateDirectory(path);
-                    }
-
-                    // Genera un nombre único para la imagen
-                    var imageName = $"{lessonIdResult}{Path.GetExtension(request.PreviousImage.FileName)}";
-                    var imagePath = Path.Combine(path, imageName);
-
-                    // Guarda la imagen en el directorio
-                    using (var stream = new FileStream(imagePath, FileMode.Create))
-                    {
-                        await request.PreviousImage.CopyToAsync(stream);
-                    }
+                    var codeFile = Guid.NewGuid().ToString();
+                    var SaveFile = await _azureStorage.SaveFile("lessons", request.PreviousImage, codeFile);
 
                     var paramCreateLessonIMG = new DynamicParameters();
-                    paramCreateLessonIMG.Add("@PreviousImage", baseUrl+ urlLessonsImg+ imageName);
+                    paramCreateLessonIMG.Add("@PreviousImage", SaveFile.ToString());
                     paramCreateLessonIMG.Add("@Id", lessonIdResult);
 
                     var lessonIdResultImg = await connection.QuerySingleAsync<int>(
@@ -189,15 +179,14 @@ namespace MEJORA.Infrastructure.Repositories
                 var transaction = connection.BeginTransaction();
                 try
                 {
-                    var baseUrl = _configuration["UrlBase:urlMejora"]!;
-                    var urlLessonsImg = _configuration["UrlBase:urlLessonsImg"]!;
+                    var baseUrl = _configuration["UrlBase:urlMejoraApi"]!;
 
                     string spUpdateLesson = "spUpdateLesson";
 
                     var param = new DynamicParameters();
                     param.Add("@LessonId", request.Id);
                     param.Add("@Name", request.Name);
-                    param.Add("@@Description", request.Description);
+                    param.Add("@Description", request.Description);
                     param.Add("@PreviousImage", "");
                     param.Add("@LessonOrder", request.LessonOrder);
                     param.Add("@Objetives", request.Objectives);
@@ -217,26 +206,13 @@ namespace MEJORA.Infrastructure.Repositories
 
 
                     #region imagen
-                    var path = Path.Combine(Directory.GetCurrentDirectory(), "Images\\Lessons");
-                    if (!Directory.Exists(path))
-                    {
-                        Directory.CreateDirectory(path);
-                    }
-
-                    // Genera un nombre único para la imagen
-                    var imageName = $"{request.Id}{Path.GetExtension(request.PreviousImage.FileName)}";
-                    var imagePath = Path.Combine(path, imageName);
-
-                    // Guarda la imagen en el directorio
-                    using (var stream = new FileStream(imagePath, FileMode.Create))
-                    {
-                        await request.PreviousImage.CopyToAsync(stream);
-                    }
+                    var codeFile = Guid.NewGuid().ToString();
+                    var SaveFile = await _azureStorage.SaveFile("lessons", request.PreviousImage, codeFile);
 
                     string spSetImageLesson = "spSetImageLesson";
 
                     var paramCreateLessonIMG = new DynamicParameters();
-                    paramCreateLessonIMG.Add("@PreviousImage", baseUrl + urlLessonsImg + imageName);
+                    paramCreateLessonIMG.Add("@PreviousImage", SaveFile.ToString());
                     paramCreateLessonIMG.Add("@Id", request.Id);
 
                     var lessonIdResultImg = await connection.QuerySingleAsync<int>(
@@ -560,6 +536,23 @@ namespace MEJORA.Infrastructure.Repositories
             {
                 Id = generatedId
             };
+        }
+
+        public async Task<GetLessonByIdResponse> GetLessonById(int id)
+        {
+            using var connection = _context.CreateConnection;
+            string procedure = "spGetLessonById";
+
+            var parametros = new DynamicParameters();
+            parametros.Add("@Id", id);
+
+            var response = await connection.QueryFirstOrDefaultAsync<GetLessonByIdResponse>(
+                procedure,
+                param: parametros,
+                commandType: CommandType.StoredProcedure
+            );
+
+            return response;
         }
     }
 }

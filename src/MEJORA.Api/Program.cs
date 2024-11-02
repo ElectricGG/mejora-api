@@ -1,3 +1,4 @@
+using bvs.cotizador.auth.WebApi.Middlewares;
 using MEJORA.Api.Extensions;
 using MEJORA.Application.UseCase.Extensions;
 using MEJORA.Infrastructure.Extensions;
@@ -27,6 +28,8 @@ builder.Services.AddCors(opt =>
     });
 });
 
+
+
 builder.Services.Configure<FormOptions>(options =>
 {
     options.MultipartBodyLengthLimit = long.MaxValue; // Sin límite
@@ -39,6 +42,7 @@ builder.WebHost.ConfigureKestrel(serverOptions =>
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionMiddleware>();
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new Microsoft.Extensions.FileProviders.PhysicalFileProvider(

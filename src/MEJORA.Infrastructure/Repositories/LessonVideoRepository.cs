@@ -123,7 +123,18 @@ namespace MEJORA.Infrastructure.Repositories
                 catch (Exception ex)
                 {
                     transaction.Rollback();
-                    throw new Exception("Error creating medias", ex);
+                    using var connection2 = _context.CreateConnection;
+                    string procedure = "spCreateLogExceptions";
+
+                    var parametros = new DynamicParameters();
+                    parametros.Add("@result", ex.Message + " ___ " + ex.InnerException + " ___ " + ex.StackTrace);
+
+                    var affectedRows = await connection.ExecuteAsync(
+                        procedure,
+                        param: parametros,
+                        commandType: CommandType.StoredProcedure
+                    );
+                    throw new Exception("Error creating medias : " + ex);
                 }
             }
         }

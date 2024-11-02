@@ -20,6 +20,7 @@ namespace MEJORA.Application.Interface
         Task<bool> DeleteSatisfactionSurvey(int id);
         Task<List<ListSurveysResolveResponse>> ListSurveysResolves();
         Task<CreateSatisfactionSurveyResolveResponse> CreateSatisfactionSurveyResolve(CreateSatisfactionSurveyResolveRequest request);
+        Task<GetLessonByIdResponse> GetLessonById(int id);
 
     }
 }

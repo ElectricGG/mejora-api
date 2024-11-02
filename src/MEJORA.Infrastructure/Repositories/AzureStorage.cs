@@ -1,13 +1,14 @@
 ﻿using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
+using MEJORA.Application.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 
-namespace MEJORA.Application.UseCase.Services
+namespace MEJORA.Infrastructure.Repositories
 {
     public class AzureStorage : IAzureStorage
     {
-        private readonly string _connectionString;
+        public readonly string _connectionString;
 
         public AzureStorage(IConfiguration configuration)
         {

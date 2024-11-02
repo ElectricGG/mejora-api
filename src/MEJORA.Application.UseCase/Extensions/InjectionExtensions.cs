@@ -13,7 +13,6 @@ namespace MEJORA.Application.UseCase.Extensions
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
             services.AddTransient<IEmailService, EmailService>();
-            services.AddTransient<IAzureStorage, AzureStorage>();
 
             return services;
         }

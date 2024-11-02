@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace MEJORA.Application.UseCase.Services
+namespace MEJORA.Application.Interface
 {
     public interface IAzureStorage
     {
